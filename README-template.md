@@ -45,7 +45,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here]http://127.0.0.1:5500/rest.html
+- Solution URL: http://127.0.0.1:5500/rest.html
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -57,9 +57,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -72,15 +70,83 @@ To see how you can add code snippets, see below:
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+fetch('data.json').then(response => response.json()).then(data => {
+            const dataArray = Object.values(data)
+            dataArray.forEach(item => {
+
+
+                        const countryCon = document.createElement('div');
+                        countryCon.addEventListener('click', (e) => {
+                            console.log('works')
+                            mainCon.style.display = 'none'
+                            const showCountryDetails = document.createElement('div');
+                            
+                           
+                            showCountryDetails.innerHTML = `
+            <div class='flagDetailContainer'>
+            <div class='backBtn'>
+            <button id='directBtn' onclick="location.reload();">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+            Back</button>
+            </div>
+            <div class='countryFlag-name'> 
+
+            <div class='countryFlag'>
+            <img src=${item.flag} alt=${item.name}>
+            </div>
+            <div class='countryName'> 
+            <h1>${item.name} </h1>
+            <div class='countryItemsCon'> 
+            <div>
+            <p> Native Name: ${item.nativeName} </p>
+             <p> Population: ${item.population} </p>
+              <p> Region: ${item.region} </p>
+               <p> Sub Region:  ${item.subregion} </p>
+                <p> Capital: ${item.capital} </p>
+                </div>
+                <div>
+ <p> Top Level Domain: ${item.nativeName} </p>
+  <p> Currencies: ${item.nativeName} </p>
+   <p> Language: ${item.languages.map(lang =>  lang.name).join(' ')} </p>
+                </div>
+            </div>
+            <div class='countryBorder'>
+         ${item.borders.map(border =>`<button>${border}</button>`).join('')}
+
+
+
+                    </div> 
+                    </div>
+
+                    </div>
+                     </div>
+
+                    `
+            showCountry.appendChild(showCountryDetails)
+            console.log(item.borders)
+        })
+        countryCon.innerHTML = ` 
+        <div class = 'flagComponent' id = 'flagComponents' >
+                    <img src = '${item.flag}'
+                    alt = '${item.name}' >
+                    <div class = 'population' >
+                    <p> <b> ${ item.name } </b> </p>
+                    <div class = 'population-region' >
+                    <span> <b> Population </b>: ${item.population}</span >
+                    <span> <b> Region </b>: ${item.region}</span>
+                    <span> <b> Capital </b>: ${item.capital}</span >
+                    </div> 
+                    </div>
+</div>
+
+                    `
+        countryDetails.appendChild(countryCon)
+    });
+})
+
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
