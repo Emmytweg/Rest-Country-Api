@@ -30,13 +30,13 @@ searchBar.addEventListener('keypress', (e) => {
                 const searchReturn = document.createElement('div') 
                 result.forEach(res=> {
                     searchReturn.innerHTML=`
-                <div class='flagDetailContainer'>
+          <div class='flagDetailContainer'>
             <div class='backBtn'>
             <button id='directBtn' onclick="location.reload();">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
             Back</button>
             </div>
-            <div class='countryFlag-result'> 
+            <div class='countryFlag-name'> 
 
             <div class='countryFlag'>
             <img src=${res.flag} alt=${res.name}>
@@ -58,11 +58,7 @@ searchBar.addEventListener('keypress', (e) => {
                 </div>
             </div>
             <div class='countryBorder'>
-         ${res.borders.map(border => 
-
-            `<button>${border}</button>`
-           
-            ).join('')}
+         ${res.borders.map(border =>`<button>${border}</button>`).join('')}
 
 
 
@@ -72,7 +68,6 @@ searchBar.addEventListener('keypress', (e) => {
                     </div>
                      </div>
 
-                    
                     `
                 })
                 
