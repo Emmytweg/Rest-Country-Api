@@ -265,6 +265,10 @@ background-color: #2B3743;
 /* Media Query */
 
 @media screen and (max-width:768px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
     .search-input input {
         width: 100%;
     }
@@ -274,7 +278,9 @@ background-color: #2B3743;
         gap: 40px;
     }
     .countryDetails {
-        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-columns: repeat(1, 1fr); */
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100px;
@@ -283,7 +289,7 @@ background-color: #2B3743;
         gap: 20px;
     }
     header.header-where {
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -291,19 +297,38 @@ background-color: #2B3743;
     }
     .countryFlag-name{
         flex-direction: column;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         margin: auto;
     }
     .countryFlag{
         margin: auto;
         gap: 0;
+        flex-direction: column;
         flex-wrap: wrap;
+        /* width: 50%; */
     }
     .countryFlag img{
         margin: auto;
-width:  350px;
+width:  250px;
+overflow: hidden;
     }
     .countryItemsCon{
+        flex-direction: column;
      flex-wrap: wrap;
+     /* width: 80%; */
+    }
+    .countryBorder{
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+width: 50%;
+    }
+    .flagDetailContainer{
+        margin: 0 !important;
+        padding: 0 !important;
+        /* width: ; */
+        
+    }
+    .backBtn button{
+        margin-top: 5em;
     }
 }
