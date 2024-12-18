@@ -46,7 +46,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: http://127.0.0.1:5500/rest.html
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://emmytweg.github.io/Rest-Country-Api/
 
 ## My process
 
@@ -68,9 +68,10 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
+<h1>Nothing new in this code but iutilized more html semantics</h1>
+```css
+ display: grid;
+  grid-template-columns: repeat(2, 3fr);
 ```
 ```js
 fetch('data.json').then(response => response.json()).then(data => {
@@ -161,16 +162,16 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+ - This project made me use Ai to improve my skills.
+
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - (https://www.frontendmentor.io/profile/Emmytweg)
+- Twitter - (https://x.com/Emmanue86212569)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
